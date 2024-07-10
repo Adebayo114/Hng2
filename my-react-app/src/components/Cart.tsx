@@ -10,16 +10,17 @@ function Cart() {
 
 
 
-
+        <h3>Cart Item</h3>
             {/* parent div */}
             <div className="pc-cart">
                     {/* first-details */}
                 <div className="pc-dts">
-
+                        
                 <div className="pc-img">
                     <img id='imc' src={image} alt="" />
                 </div>
                 <div className="pcs-dts3">
+            
                     <p>Apple MacBook Air 13'
                         <p>256GB SSD/8-Core GPU</p>
                     </p>
