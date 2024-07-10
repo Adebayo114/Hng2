@@ -1,0 +1,93 @@
+.cart-page{
+
+}
+
+.pc-cart{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pc-img{
+    margin-top: 5rem;
+}
+
+.sc{
+    
+}
+
+.pc-dts{
+    margin-top: 5rem;
+    box-shadow: 2px 2px 2px 2px;
+    display: flex;
+    gap: 5rem;
+}
+
+#imc{
+    width: 280px;
+}
+
+#list{
+
+}
+
+.pc-dts2{
+
+}
+
+.price-dts{
+
+}
+
+.incerment{
+
+}
+
+.summary{
+    
+    margin-top: 5rem;
+}
+                                            /* total */
+                    
+.payment-dts{
+    display: flex;
+    gap: 4rem;
+}
+
+.expenses{
+
+}
+
+.exp-list{
+
+}
+
+.exp-pay{
+
+}
+
+.pay-list{
+
+}
+
+.total{
+    display: flex;
+    gap: 5rem;
+}
+
+.tot{
+
+}
+
+.tp{
+
+}
+
+.pay-btn{
+
+}
+
+.rtrn{
+
+}
+
