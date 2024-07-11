@@ -92,29 +92,66 @@
     text-align: center;
 }
 
-
-.advert{
+.advert {
     display: flex;
-    margin-left: 12rem;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    margin: 0 auto;
+    padding: 2rem;
     width: 80%;
     justify-content: center; 
     align-items: center; 
     background-color: rgba(165, 45, 93, 0.3); /* Using rgba for transparency */
     color: black;
     margin-bottom: 5rem;
-    border-radius: 1rem ;
+    border-radius: 1rem;
 }
 
+.fone-logo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
 
+.advert-details {
+    text-align: center;
+    padding-top: 1rem;
+}
 
-.download-option{
+.download-option {
     display: flex;
     gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .apple-version, .ios-version {}
-#apple,#google{
+
+#apple, #google {
     width: 180px;
     border-radius: 1rem;
 }
 
+@media (max-width: 768px) {
+    .advert {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center;
+    }
+
+    .fone-logo, .advert-details {
+        width: 100%;
+    }
+
+    #apple, #google {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .advert {
+        padding: 1rem;
+    }
+
+    #apple, #google {
+        width: 120px;
+    }
+}

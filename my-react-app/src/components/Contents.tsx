@@ -11,11 +11,7 @@ import pc4 from '../assets/pcs/hp end.jpeg'
 import heart from '../assets/icons/heart (2).png'
 import googleplay from '../assets/pcs/gp.jpeg'
 import apple from '../assets/pcs/ap.jpeg'
-import heart1 from '../assets/icons/heart (2).png'
-import heart2 from '../assets/icons/heart (2).png'
-import heart3 from '../assets/icons/heart (2).png'
-import heart4 from '../assets/icons/heart (2).png'
-import fone from '../assets/pcs/topsell.jpeg'
+
 
 function Contents() {
     return (
