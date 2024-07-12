@@ -19,6 +19,10 @@
     margin-bottom: 3rem;
 }
 
+.f-img{
+    width:500px;
+}
+
 .form1-sec {
     flex: 1;
     min-width: 250px;

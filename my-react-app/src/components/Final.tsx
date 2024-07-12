@@ -35,7 +35,7 @@ function Final() {
 
             <div className="final-border">
                 <div className="img-f">
-                    <img src={svg} alt="" />
+                    <img className='f-img' src={svg} alt="" />
                 </div>
                     <h2>Payment Successful</h2>
                     <p>Thank you for entrusting your care to us.Please be patient 
