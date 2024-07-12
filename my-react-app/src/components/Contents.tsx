@@ -44,7 +44,7 @@ function Contents() {
                 <p className='content-text'>Apple MacBook Pro 16'
                 <p>1TB - 10 Cores M1 Max</p>
                 </p>
-                <p className='price'>$659</p>
+                <p className='price'>$3,670</p>
 
                 <div className="cart-btn">
                     <button className='btn'>ADD TO CART</button>
@@ -58,7 +58,7 @@ function Contents() {
                 <p>Gen Intel Core i5</p>
                 </p>
                 
-                <p className='price'>$659</p>
+                <p className='price'>$943</p>
 
                 <div className="cart-btn">
                     <button className='btn'>ADD TO CART</button>
@@ -71,7 +71,7 @@ function Contents() {
                 <p className='content-text'>Dell Latitude 3420-14'
                 <p>Gen Intel Core i5</p>
                 </p>
-                <p className='price'>$659</p>
+                <p className='price'>$732</p>
 
                 <div className="cart-btn">
                     <button className='btn'>ADD TO CART</button>
@@ -84,7 +84,7 @@ function Contents() {
                 <p className='content-text'>Hp Latitude 3420-14'
                 <p>Gen Intel Core i5</p>
                 </p>
-                <p className='price'>$659</p>
+                <p className='price'>$680</p>
 
                 <div className="cart-btn">
                     <button className='btn'>ADD TO CART</button>

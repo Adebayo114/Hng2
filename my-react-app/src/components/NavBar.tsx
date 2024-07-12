@@ -12,7 +12,7 @@ function NavBar() {
               <div className="nav">
               <h2>Top Sell</h2>
                 <div className="search">
-                <input type="search" name="" placeholder="What product are you buying" id="srch" />
+                <input type="search" name="" placeholder="   What product are you buying" id="srch" />
             </div>
             <a href=""><div className="s-l">Sign Up /Login</div></a>
             <a href=""><div className="prdct">Products</div></a>
