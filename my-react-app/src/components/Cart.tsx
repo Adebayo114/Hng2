@@ -1,54 +1,60 @@
-import pc1 from '../assets/pcs/pc01.jpeg'
+import React from 'react';
+import truck from '../assets/icons/cargo-truck (2).png'
+import car from '../assets/icons/car (1).png'
+import pc1 from '../assets/pcs/pc01.jpeg';
 import pc5 from '../assets/pcs/pro 16.jpeg'
 import pc2 from '../assets/pcs/samsung book3.jpeg'
 import pc3 from '../assets/pcs/dell 3420-14.jpeg'
 import pc4 from '../assets/pcs/hp end.jpeg'
-import heart from '../assets/icons/heart (2).png'
-import '../styles/Cart.css';
-import plus from '../assets/icons/plus.png'
-import minus from '../assets/icons/minus (1).png'
-import { Link } from 'react-router-dom'
-import ts from '../assets/pcs/topsell.png'
-import googleplay from '../assets/pcs/gp.jpeg'
-import apple from '../assets/pcs/ap.jpeg'
-import image from '../assets/pcs/dell 7490.jpeg'
-import trck from '../assets/icons/cargo-truck (2).png'
-import car from '../assets/icons/car (1).png'
+import heart from '../assets/icons/heart.png';
 import box from '../assets/icons/box (1).png'
+import { useCart } from '../Contexxt/CartContent'
+import minus from '../assets/icons/minus (1).png';
+import plus from '../assets/icons/plus.png';
+import ts from '../assets/pcs/topsell.png';
+import googleplay from '../assets/pcs/gp.jpeg';
+import apple from '../assets/pcs/ap.jpeg';
+import { Link } from 'react-router-dom';
+import '../styles/Cart.css';
 
-function Cart() {
+const Cart: React.FC = () => {
+  const { cartItems, incrementQuantity, decrementQuantity } = useCart();
+
   return (
     <>
-     <h2 className='ht'>Shopping Cart (1 Item)</h2>
+      <h2 className='ht'>Shopping Cart ({cartItems.length} Item{cartItems.length > 1 ? 's' : ''})</h2>
       <div className="container">
-        
         <div className="shopping-cart">
-            <div className="shopping-cart-item">
-                <img src={image} alt="Apple MacBook Air"/>
-                <div>
-                    <h3>Apple MacBook Air 13"</h3>
-                    <p>256GB SSD 8-Core CPU</p>
-                    <p className='dealer'>Top Sell Dealer</p>
-                        <select name="" id="option">
-                            <option value="">Color</option>
-                            <option value="">Red</option>
-                            <option value="">Blue</option>
-                        </select>
+          {cartItems.map((item) => (
+            <div key={item.id} className="shopping-cart-item">
+              <img src={item.image} alt={item.name} />
+              <div>
+                <h3>{item.name}</h3>
+                <p>1TB - 10 Cores M1 Max</p>
+                <p className='dealer'>Top Sell Dealer</p>
+                <select name="" id="option">
+                  <option value="">Black</option>
+                  <option value="">Space Grey</option>
+                  <option value="">Silver</option>
+                </select>
+                <p className="price">${item.price}</p>
+                <div className="quantity-control">
+                  <button id='minus' onClick={() => decrementQuantity(item.id)}>
+                    <img src={minus} alt="minus" />
+                  </button>
+                  <span>{item.quantity}</span>
+                  <button id='plus' onClick={() => incrementQuantity(item.id)}>
+                    <img src={plus} alt="plus" />
+                  </button>
                 </div>
-                <p>$1,656.00</p>
-                <div className="counter-container">
-        <img src={plus} alt="" id="decrement"/>
-        <span id="counter">0</span>
-        <img src={minus} alt="" id="increment" />
-    </div>
+              </div>
             </div>
-            <img src={heart} alt="" />
-            <button>Remove</button>
-
+          ))}
         </div>
 
+
+
         <div className="summary">
-    <h2 className='ap'>Summary</h2>
     <div className="sum-head">
         <div className="sum-kids">
             <p>Subtotal:</p>
@@ -57,42 +63,48 @@ function Cart() {
         </div>
 
         <div className="sum-kid2">
-                <p>$1,656.00</p>
+        {cartItems.map((item) => (
+        <p className="price">${item.price}</p>
+        )
+      )}
                 <p>$10.50</p>
                 <p>$0.00</p>
         </div>
     </div>
-
-    <div className="tt">
-        <p className="total">Total: </p>
-        <div className="t2">$1,666.50</div>
-    </div>
-        <Link to="/CheckOut">
-            <button className='btn2'>Proceed to checkout</button>
-        </Link>
-
-    <p className="return-policy">Free 30-day return with ease</p>
+        <hr />
+    <div className="tt-1">
+    <p className="total-price">Total: </p>
+    <p>${cartItems.reduce((total, item) => total + item.price * item.quantity, 0)}</p>
 </div>
 
+          <Link to ='/checkout'>
+          <div className="checkout">
+            <button className="checkout-btn">Proceed to Checkout</button>
+          </div>
+          </Link>
+<p className="return-policy1">Free 30-day return with ease</p>
 
         </div>
-        
-        <div className="shipping-options">
+      </div>
+
+
+      
+      <div className="shipping-options">
             <h2 className='so'>Shipping Options</h2>
             <div className="options">
                 <div className='options-sec'>
-                    <img src={trck} alt="" />
-                    <p>Shipping Available</p>
+                    <img src={truck} alt="" />
+                    <p>Shipping </p>
                     <p className='alble'>Available</p>
                     </div>
                 <div className='options-sec'>
                     <img src={car} alt="" />
-                    <p>Pickup Available</p>
+                    <p>Pickup </p>
                     <p className='alble'>Available</p>
                     </div>
                 <div className='options-sec'>
                     <img src={box} alt="" />
-                    <p>Delivery Available</p>
+                    <p>Delivery</p>
                     <p className='alble'>Available</p>
                 </div>
             </div>
@@ -169,30 +181,27 @@ function Cart() {
 
         </div>
 
-        <div className="advert">
-            <div className="fone-logo">
-                <img src={ts} alt="" />
-            </div>
 
-
-            <div className="advert-details">
-                <h2>Get more on our app</h2>
-                <p>Unlock exclusive features save serches,track inquiries mpore with our app <p>
-                    Available on IOS and Android</p></p>
-                    <div className="download-option">
-                        <div className="apple-version">
-                            <img id='apple' src={apple} alt="" />
-                        </div>
-
-
-                        <div className="ios-version">
-                            <img id='google' src={googleplay} alt="" />
-                        </div>
-                    </div>
-            </div>
+      <div className="advert">
+        <div className="fone-logo">
+          <img src={ts} alt="Top Sell" />
         </div>
+        <div className="advert-details">
+          <h2>Get more on our app</h2>
+          <p>Unlock exclusive features, save searches, track inquiries, and more with our app.</p>
+          <p>Available on iOS and Android</p>
+          <div className="download-option">
+            <div className="apple-version">
+              <img id="apple" src={apple} alt="Apple" />
+            </div>
+            <div className="ios-version">
+              <img id="google" src={googleplay} alt="Google Play" />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

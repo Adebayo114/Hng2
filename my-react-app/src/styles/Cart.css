@@ -44,6 +44,17 @@
     gap: 3rem;
 }
 
+#minus{
+    border: none;
+    width: 3rem;
+    background-color:white;
+}
+
+#plus{
+    border: none;
+    width: 3rem;
+    background-color:white;
+}
 .shopping-cart img {
     max-width: 280px;
     margin-right: 20px;
@@ -57,6 +68,9 @@
     margin-bottom: 10px;
 }
 
+.sum-kids{
+    margin-top: 1rem;
+}
 .dealer {
     margin-bottom: 3rem;
 }
@@ -99,6 +113,25 @@
     border-radius: 1rem;
     background-color: rgb(216, 63, 124); 
     box-shadow: 2px 2px 2px 2px;
+}
+
+.checkout{
+    margin-left: -5rem;
+}
+.checkout-btn{
+    border: none;
+    margin-bottom: 1rem;
+    border: none;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(216, 63, 124); 
+    box-shadow: 2px 2px 2px 2px;
+}
+
+.checkout-btn:hover{
+    color: black;
+    background-color: whitesmoke;
 }
 
 .btn2:hover {
@@ -174,7 +207,7 @@
     }
 
     .sum-head {
-        flex-direction: column;
+        flex-direction:row;
         align-items: center;
         gap: 1rem;
     }
@@ -190,7 +223,19 @@
     .pay-btn, .return-policy {
         text-align: center;
     }
+
+    .shipping-options{
+        display: block;
+        margin-top: 59rem;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .options-sec{
+        padding: 2rem;
+    }
 }
+
 
 @media (max-width: 768px) {
     .container {
@@ -211,8 +256,18 @@
         margin-bottom: 1rem;
     }
 
+    .options-sec{
+        padding: 1rem;
+    }
+
     .summary {
         padding: 20px;
+    }
+
+    .shipping-options{
+        margin-top: 39rem;
+        text-align: center;
+        
     }
 
     .btn2 {
@@ -225,7 +280,7 @@
         max-width: 100%;
     }
 
-    .shopping-cart, .summary {
+    .shopping-cart{
         padding: 10px;
     }
 
@@ -235,9 +290,19 @@
     .shipping-options{
         margin-top: 39rem;
         text-align: center;
+        display: block;
+    }
+
+    .summary{
+        margin-bottom: 60rem;
+        width: 15rem;
     }
     .return-policy {
         padding: 0.5rem;
+    }
+
+    .checkout{
+        margin-right: -5rem;
     }
 
     .options {

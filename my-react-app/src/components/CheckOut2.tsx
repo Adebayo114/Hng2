@@ -6,14 +6,16 @@ import '../styles/checkout.css'
 import ts from '../assets/pcs/topsell.png'
 import googleplay from '../assets/pcs/gp.jpeg'
 import apple from '../assets/pcs/ap.jpeg'
+import { useCart } from '../Contexxt/CartContent';
 import '../styles/CheckOut2.css'
-import maca from '../assets/pcs/Air 13.jpeg'
+
 import visa from '../assets/icons/visa (1).png'
 import apppay from '../assets/icons/apple.png'
 import ms from '../assets/icons/card.png'
 import { Link } from 'react-router-dom'
 
 function CheckOut2() {
+    const { cartItems} = useCart();
   return (
     <>
     <h2 className='co'>Check Out</h2>
@@ -106,45 +108,44 @@ function CheckOut2() {
                     
 
                 <div className="side-pay">
-                    <h2>Order</h2>
-                    <div className="item-box">
-                        <img id='maca' src={maca} alt="" />
-                        <p>Apple MacBook Air 13'
-                            <p> 256GB/8-Core GPU</p>
-                            <select name="" id="options">
-                                <option value="">Black</option>
-                                <option value="">Red</option>
-                                <option value="">Blue</option>
-                            </select>
-                        </p>
-                    </div>
-
-                    <div className="summary4">
-    <div className="sum-head2">
-        <div className="sum-kids1">
-            <p>Subtotal:</p>
-            <p>Shipping fee:</p>
-            <p>Taxes:</p>
-        </div>
-
-        <div className="sum-kid3">
-                <p>$1,656.00</p>
-                <p>$10.50</p>
-                <p>$0.00</p>
-        </div>
-    </div>
-        <hr />
-    <div className="tt-1">
-        <p className="total5">Total: </p>
-        <div className="t6">$1,666.50</div>
-</div>
-
-<p className="return-policy1">Free 30-day return with ease</p>
-
-        </div>
-
+            <h2>Order</h2>
+            <div className="item-box">
+              {cartItems.map((item) => (
+                <div key={item.id}>
+                  <img id='maca' src={item.image} alt="" />
+                  <p>{item.name}</p>
+                  <p>256GB/8-Core GPU</p>
+                  <select name="" id="options">
+                    <option value="">Black</option>
+                    <option value="">Red</option>
+                    <option value="">Blue</option>
+                  </select>
                 </div>
-                
+              ))}
+            </div>
+            <div className="summary4">
+              <div className="sum-head2">
+                <div className="sum-kids1">
+                  <p>Subtotal:</p>
+                  <p>Shipping fee:</p>
+                  <p>Taxes:</p>
+                </div>
+                <div className="sum-kid3">
+                  {cartItems.map((item) => (
+                    <p key={item.id}>${item.price}</p>
+                  ))}
+                  <p>$10.50</p>
+                  <p>$0.00</p>
+                </div>
+              </div>
+              <hr />
+              <div className="tt-1">
+                <p className="total5">Total: </p>
+                <div className="t6">${cartItems.reduce((total, item) => total + item.price * item.quantity, 0)}</div>
+              </div>
+              <p className="return-policy1">Free 30-day return with ease</p>
+            </div>
+          </div>
             </div>
 
             

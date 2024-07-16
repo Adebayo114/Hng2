@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Monroe';
     src: url('../Manrope/static/Manrope-Regular.ttf') format('truetype'),
-         url('../Manrope/static/Monroe.woff') format('woff');
+    url('../Manrope/static/Monroe.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

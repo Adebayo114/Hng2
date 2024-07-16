@@ -7,6 +7,12 @@
     background-color: rgb(19, 18, 18);
     padding: 1rem 2rem;
     flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for better visibility */
 }
 
 .nav h2 {
@@ -75,45 +81,36 @@ a {
     }
 }
 
-
-.footer{
+.footer {
     background-color: rgb(19, 18, 18);
     color: white;
 }
 
-    .footr-nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2.5rem; /* Example padding */
-    }
-    
-    .footer-nav {
-        margin: 0 1rem; /* Space between the nav items */
-        color: white; /* Example text color */
-        font-family: 'Monroe', 'Courier New', Courier, monospace; /* Apply your custom font */
-    }
-    
+.footr-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem; /* Example padding */
+}
 
-    .ts{
-        text-align: center;
-        font-family: 'Monroe', 'Courier New', Courier, monospace;
-        font-size: 15px;
-    }
+.footer-nav {
+    margin: 0 1rem; /* Space between the nav items */
+    color: white; /* Example text color */
+    font-family: 'Monroe', 'Courier New', Courier, monospace; /* Apply your custom font */
+}
 
+.ts {
+    text-align: center;
+    font-family: 'Monroe', 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
 
-
-
-.footer-icons{
-    
+.footer-icons {
     display: flex;
     gap: 2rem;
     justify-content: center;
     align-items: center;
-}
-.footer-icons{
     margin: 0 1rem;
     margin-top: 2rem;
     padding-bottom: 2rem;
-
 }
