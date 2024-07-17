@@ -197,6 +197,8 @@
     gap: 3rem;
 }
 
+
+
 #options {
     border-radius: 0.5rem;
     border: none;
@@ -294,12 +296,12 @@
     .si {
         margin-top: 3rem;
         background-color: rgba(191, 94, 133, 0.5);
-        margin-left: 1rem;
+        margin-left: 1.5rem;
         box-shadow: 2px 2px 2px 2px;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
         padding: 2rem;
-        width: 24rem;
+        width: 23.3rem;
     }
     .trf-sec {
         display: flex;
@@ -321,12 +323,17 @@
         padding: 0.5rem;
     }
 
-    .form, .form-main {
-        flex-direction: column;
+     .form-main {
+        flex-direction:row;
         align-items: center;
-        margin-left: 0;
+        margin-left: -1.5rem;
         width: 100%;
         padding: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .form{
+        display: block;
     }
     .lb {
         width: 20rem;
@@ -350,6 +357,8 @@
     .summary, .side-pay {
         padding-left: 2rem;
         padding-right: 2rem;
+        margin-left: -1.5rem;
+        padding-bottom: 2rem;
         width: 100%;
     }
 
@@ -358,4 +367,7 @@
         gap: 1rem;
         align-items: center;
     }
+
+
+
 }
