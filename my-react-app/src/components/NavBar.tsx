@@ -18,15 +18,18 @@ function NavBar() {
       <div className="nav">
         <img src={menuIcon} alt="Menu-icon" className="menu-icon" onClick={() => setMenuOpen(!menuOpen)} />
         <h2>Top Sell</h2>
-        <div className="search" onClick={() => setSearchOpen(true)}>
-          <img src={searchIcon} alt="Search-icon" />
-        </div>
-        <a href="" className="s-l">Sign Up/Login</a>
+        <div className="search"    onClick={() => setSearchOpen(true)}>
+        <img src={searchIcon} alt="" /> <input type="search" name="" placeholder="   What product are you buying" id="srch" />
+            </div>
+
+      
+        <a href="" className="prdct">Sign Up/Login</a>
         <a href="" className="prdct">Products</a>
-        
         <div className="nav-icons">
           <div className="nav-icons-kids">
-
+          <Link to="/cart">
+                <img src={shoppingIcon} alt="Shopping-icon" />
+              </Link>
           </div>
           <div className="nav-icons-kids">
             <img src={heartIcon} alt="Heart-icon" />

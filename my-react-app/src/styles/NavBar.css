@@ -47,6 +47,9 @@ a {
     padding: 0.2rem;
 }
 
+
+
+
 #srch::placeholder {
     font-size: 16px;
 }
@@ -73,8 +76,11 @@ a {
     align-items: center;
 }
 
+#search-f{
+    background-color: white;
+}
 .search-modal input {
-    width: 80%;
+    width: 20%;
     padding: 1rem;
     font-size: 1.2rem;
     border: none;
@@ -92,14 +98,19 @@ a {
 
 .nav-icons {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+    text-align: center;
+    justify-content: center;
 }
 
 .nav-icons-kids {
     display: flex;
-    align-items: center;
 }
 
+.prdct{
+    margin-left:2rem;
+    margin-right: 8em;
+}
 .menu-icon {
     cursor: pointer;
     width: 24px;
