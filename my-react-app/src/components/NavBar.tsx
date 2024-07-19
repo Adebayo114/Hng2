@@ -19,7 +19,7 @@ function NavBar() {
         <img src={menuIcon} alt="Menu-icon" className="menu-icon" onClick={() => setMenuOpen(!menuOpen)} />
         <h2>Top Sell</h2>
         <div className="search"    onClick={() => setSearchOpen(true)}>
-        <img src={searchIcon} alt="" /> <input type="search" name="" placeholder="   What product are you buying" id="srch" />
+        <img id="s-imge" src={searchIcon} alt="" /> <input type="search" name="" placeholder="   What product are you buying" id="srch" />
             </div>
 
       

@@ -183,4 +183,10 @@ a {
     .prdct, .s-l {
         display: none; /* Hide products and sign-up/login link on mobile */
     }
+
+    @media (max-width: 368px) {
+        #s-imge{
+margin-left: 4rem;
+        }
+    }
 }
