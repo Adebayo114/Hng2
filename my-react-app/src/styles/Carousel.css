@@ -32,6 +32,7 @@ a {
     position: relative;
     padding-bottom: 5px;
     cursor: pointer;
+    /* we move */
     margin: 0.5rem;
 }
 
