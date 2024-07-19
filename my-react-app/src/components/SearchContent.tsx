@@ -18,7 +18,7 @@ function SearchContent() {
                 <hr />
                 <div className="srch-form">
                     <div className="srch-kid">
-                    <img src={searchIcon} alt="" />
+                    <img id='s-image' src={searchIcon} alt="" />
                     <input type="search" name="" id="srch" placeholder='What product are you buying' />
                     </div>
                     <div className="srch-btn">Search</div>

@@ -56,8 +56,15 @@ a {
     border-radius: 0.5rem;
     display: flex;
     justify-content: space-evenly;
-    padding: 0.5rem;
+    padding-top: 0.2rem;
+    padding-right: 1rem;
+    padding-bottom: 0.3rem;
     flex-wrap: wrap;
+}
+
+#s-image{
+    margin-top: 0.8rem;
+    margin-left: 1rem;
 }
 
 .srch-kid {
@@ -69,11 +76,18 @@ a {
 }
 
 #srch {
-    height: 3rem;
+    height: 2rem;
+    text-decoration: none;
     width: 100%;
-    border: none;
+    border:solid white;
     margin-left: 5px;
 }
+
+#srch::placeholder{
+    text-align: center;
+    border: none;
+}
+
 
 .srch-btn {
     background-color: rgb(19, 18, 18);
@@ -84,6 +98,12 @@ a {
     margin-left: 0.5rem;
     color: white;
     cursor: pointer;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+.srch-btn:hover{
+    background-color: white;
+    color:black;
 }
 
 /* Media Queries for responsiveness */
@@ -113,11 +133,18 @@ a {
 }
 
 @media (max-width: 576px) {
-    .content-nav {
-        flex-direction: column;
+    /* .content-nav {
+        flex-direction: ;
+    } */
+
+            .content-page{
+                margin-bottom: 4rem;
+            }
+    .srch-form {
+        padding: 0.1rem;
     }
 
-    .srch-form {
-        padding: 1rem;
+    .srch-btn{
+        margin-left: -0.3px;
     }
 }
