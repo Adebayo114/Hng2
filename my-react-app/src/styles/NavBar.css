@@ -80,7 +80,7 @@ a {
     background-color: white;
 }
 .search-modal input {
-    width: 20%;
+    width: 100%;
     padding: 1rem;
     font-size: 1.2rem;
     border: none;
